@@ -75,7 +75,6 @@ body {
 }
 .burger-menu {
   display: none;
-  background-image: url("../svg/burger-menu.svg");
 }
 .entry_header {
   font-family: "OpenSans Bold", sans-serif;
@@ -194,21 +193,7 @@ body {
   width: 380px;
   margin-left: 30px;
 }
-.card1 {
-  background-image: url("../img/last-post1.jpg");
-}
-.card2 {
-  background-image: url("../img/last-post2.jpg");
-}
-.card3 {
-  background-image: url("../img/last-post3.jpg");
-}
-.card4 {
-  background-image: url("../img/last-post4.jpg");
-}
-.card5 {
-  background-image: url("../img/last-post5.jpg");
-}
+
 .card_a,
 .under-header_item_list-item_a {
   font-family: "OpenSans Bold", sans-serif;
@@ -667,6 +652,7 @@ body {
   padding: 40px;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  align-content: center;
 }
 
 .popup-checkbox:checked + .popup {
@@ -706,35 +692,56 @@ body {
   padding: 0;
   margin: 0;
 }
-.popup-text {
-  font-size: 13px;
-  margin-bottom: 0;
-}
 .popup-form-label {
   display: block;
   margin-top: 15px;
 }
-.form_input_big {
-  box-sizing: border-box;
-  min-height: 130px;
-  padding-bottom: 80px;
+.popup-text {
+  font-size: 13px;
+  margin-bottom: 0;
+}
+.input-arrows {
+  position: relative;
+}
+.arrows {
+  background-image: url("../svg/form-arrows.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 140px;
+  right: 45px;
+}
+
+.popup-checkbox-group {
+  position: relative;
+  display: inline;
 }
 .popup-checkbox-control {
   display: none;
 }
+
 .input-group-text::before {
   content: "";
+  display: inline-block;
   background-image: url("../svg/form-empty-circle.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  margin-right: 5px;
 }
+
 .popup-checkbox-control:checked + .input-group-text::before {
   background-image: url("../svg/form-circle.svg");
 }
-.arrows {
-  top: 125px;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  right: 45px;
+
+.form_input_big {
+  box-sizing: border-box;
+  min-height: 130px;
+  padding-bottom: 80px;
 }
 
 @media (min-width: 641px) and (max-width: 1200px) {
@@ -744,6 +751,10 @@ body {
   .wrapper {
     background-image: url("../img/banner-bg-tablet.jpg");
   }
+  .header_top {
+    position: relative;
+  }
+
   .logo {
     width: 160px;
     height: 30px;
@@ -754,6 +765,14 @@ body {
   }
   .burger-menu {
     display: block;
+    background-image: url("../svg/burger-menu.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 30px;
   }
   .entry_header {
     font-size: 40px;
@@ -857,15 +876,20 @@ body {
   }
   .popup-content {
     width: 325px;
-    height: 520px;
+    height: 500px;
     padding: 25px;
   }
+  .arrows {
+    top: 127px;
+    right: 35px;
+  }
 }
-@media (orientation: landscape) and (min-width: 641px) and (max-width: 1200px){
+
+@media (orientation: landscape) and (min-width: 641px) and (max-width: 1200px) {
   .under-header_content {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-}
+  }
 }
 @media (max-width: 640px) {
   .header {
@@ -880,10 +904,13 @@ body {
     background-image: url("../img/banner-mobile.jpg");
     height: 640px;
   }
-
+  .header_top {
+    position: relative;
+  }
   .logo {
     width: 270px;
     height: 48px;
+    margin-top: 225px;
   }
 
   .menu {
@@ -892,12 +919,19 @@ body {
   .burger-menu {
     display: block;
     background-image: url("../svg/burger-menu.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: -35px;
   }
   .entry_header {
     font-size: 26px;
     line-height: 36px;
     width: 90%;
-    padding: 43px 0;
+    padding: 40px 0;
+    margin: 0;
   }
   .under-header_heading,
   .shop_heading,
@@ -1037,7 +1071,7 @@ body {
   }
   .popup-content {
     width: 330px;
-    height: 530px;
+    height: 500px;
     padding: 25px;
   }
   .popup-header {
@@ -1047,10 +1081,14 @@ body {
     width: 30px;
     height: 30px;
   }
+  .arrows {
+    top: 140px;
+    right: 30px;
+  }
 }
-@media (orientation: landscape) and (max-width: 640px){
+@media (orientation: landscape) and (max-width: 640px) {
   .under-header_content {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-}
+  }
 }
